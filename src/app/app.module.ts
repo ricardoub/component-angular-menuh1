@@ -3,7 +3,10 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+
 import { HomePageComponent } from './pages/home-page/home-page.component';
+import { MenuhModule } from './menuh/menuh.module';
+import { MenuhService } from "app/menuh/menuh.service";
 
 @NgModule({
   declarations: [
@@ -12,9 +15,10 @@ import { HomePageComponent } from './pages/home-page/home-page.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    MenuhModule
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  providers: [ MenuhService ],
+  bootstrap: [ AppComponent ]
 })
 export class AppModule { }

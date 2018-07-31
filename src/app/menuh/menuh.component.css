@@ -1,0 +1,52 @@
+.menuh .navbar {
+  border-radius: 0px;
+  border: 0px;
+}
+.menuh .navbar-default {
+  background-color: #256CB8;
+  color: #fff;
+  height: 60px;
+}
+.menuh .navbar-brand {
+  float: left;
+  font-size: 22px;
+  line-height: 40px;
+  padding: 10px;
+  letter-spacing: 3px;
+}
+.menuh a {
+  color: #c2c2c2;
+}
+.menuh a:hover,
+.menuh a:focus {
+  background-color: #256CB8;
+  color: #fff;
+}
+.menuh ul {
+  background-color: #256CB8;
+}
+.menuh a {
+  color: #c2c2c2;
+  background-color: #256CB8;
+}    
+.menuh a.active {
+  color: #ffb600;
+}
+.menuh a:hover,
+.menuh a:focus {
+  color: #fff !important;
+}
+
+.text-muted {
+    color: #999;
+}
+
+.menuh ul.dropdown-menu li a {
+  background-color: #256CB8;
+  color: #c2c2c2;
+}
+
+.menuh ul.dropdown-menu li.divider a {
+  background-color: #c2c2c2;
+  color: #256CB8;
+}

@@ -1,0 +1,23 @@
+<ul class="nav navbar-nav {{menuhClass}}">
+  <li [ngSwitch]="ml.liClass" *ngFor="let ml of {{menuhItens}}" class="{{ml.liClass}}">
+    <a *ngSwitchDefault href="{{ml.aHref}}" class="{{ml.aClass}}">
+      <i class="fa fa-2x fa-{{ml.aIcon}}"></i>
+      {{ml.aName}}
+    </a>
+    <a *ngSwitchCase="'dropdown'" data-submenu="" class="{{ml.aClass}}"
+      data-toggle="dropdown" tabindex="0" aria-expanded="false">
+      <i class="fa fa-2x fa-{{ml.aIcon}}"></i>
+      {{ml.aName}}
+      <i class="fa fa-caret-down"></i>
+    </a>
+    <ul *ngSwitchCase="'dropdown'" class="dropdown-menu">
+      <li *ngFor="let mlf of ml.liFilhos" class="{{mlf.liClass}}">
+        <a href="{{mlf.aHref}}">
+          <i class="fa fa-fw fa-{{mlf.aIcon}}"></i>
+          {{mlf.aName}}
+          <small *ngIf="mlf.aAcl" class="text-muted"> - {{mlf.aAcl}}</small>
+        </a>
+      </li>
+    </ul>
+  </li>
+</ul>
